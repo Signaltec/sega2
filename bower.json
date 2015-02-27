@@ -13,6 +13,7 @@
     "node_modules",
     "bower_components",
     "test",
+    "dist",
     "tests",
     ".bowerrc",
     ".gitignore",
@@ -20,8 +21,7 @@
     ".jshintrc",
     "bower.json",
     "gulpfile.js",
-    "package.json",
-    "README.md"
+    "package.json"
   ],
   "dependencies": {
     "sanitize.css": "~2.0.0",

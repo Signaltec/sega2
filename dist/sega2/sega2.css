@@ -1,0 +1,114 @@
+@import "../sanitize.css/dist/sanitize.min.css";
+@import "../pt-sans/styles/pt_sans.css";
+@import "../fontawesome/css/font-awesome.min.css";
+html {
+  vertical-align: baseline;
+  font-size: 1.1em;
+}
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 2.4em;
+  margin: 0 0 0.8em 0;
+}
+h2 {
+  font-size: 1.7em;
+  margin: 1.2em 0 0.8em 0;
+}
+cite {
+  display: block;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 1em 1em 1em 4em;
+  max-width: 72em;
+  font-style: normal;
+}
+cite author {
+  display: block;
+  font-style: italic;
+  margin-top: 1em;
+}
+code {
+  display: block;
+  margin: 1em;
+}
+th {
+  font-weight: normal;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+p {
+  margin-bottom: 1em;
+}
+.muted {
+  opacity: 0.4 !important;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+a {
+  text-decoration: none;
+  border-bottom: solid 1px;
+  cursor: pointer;
+}
+a.serv,
+a.pseudo-link {
+  border-bottom-style: dotted;
+}
+a.active {
+  border: none;
+  cursor: default;
+}
+a.disabled {
+  border: none;
+  cursor: not-allowed;
+}
+.disabled,
+input[type=submit].disabled,
+input[type=submit][disabled],
+button.disabled,
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.disabled:hover,
+input[type=submit].disabled:hover,
+input[type=submit][disabled]:hover,
+button.disabled:hover,
+button[disabled]:hover {
+  opacity: 0.5;
+}
+body {
+  background: #eeeeee;
+  color: #000000;
+}
+header {
+  background: #0066cc;
+  color: #ffffff;
+}
+.padding-big {
+  padding: 6em;
+}
+header {
+  padding: 30px;
+  background: #0066cc;
+}
+footer {
+  padding: 6em;
+  font-size: 80%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
