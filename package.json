@@ -1,0 +1,22 @@
+{
+  "name": "sega2.css",
+  "version": "0.0.1",
+  "description": "SEGA2.css framework",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.8.6",
+    "gulp-less": "~1.2.3",
+    "gulp-livereload": "~1.2.0",
+    "gulp-watch": "~0.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://ildarka@gerrit.signaltec.ru:29418/gui2"
+  },
+  "author": "ildarka",
+  "license": "FREE"
+}

@@ -1,0 +1,36 @@
+@font: "PT Sans", sans-serif;
+
+@font-face { font-family: "PT Sans"; src: url('styles/fonts/PTS55F.ttf') format('truetype'), url("styles/fonts/PTS55F.eot"); }
+
+html {vertical-align:baseline; line-height: 1.4em}
+body {-webkit-font-smoothing: subpixel-antialiased;}
+
+h1, h2 {font-weight:normal}
+h1 {font-size:2em; margin:0 0 0.8em 0}
+h2 {font-size:1.5em; margin:1.2em 0 0.8em 0}
+
+cite {margin:0; padding:1.5em 1.5em 1.5em 5em; font-style:italic}
+
+th {font-weight: normal}
+
+hr {border: 0; height : 1px; background: rgba(0,0,0,0.2);}
+
+p {margin-bottom:0.5em;}
+
+.muted   {opacity:0.4 !important;}
+.nowrap  {white-space:nowrap;}
+.ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+a {text-decoration: none; border-bottom:solid 1px; cursor:pointer;
+  &.serv, &.pseudo-link { border-bottom-style: dotted; }
+  &.active { border: none; cursor: default;}
+  &.disabled { border: none; cursor:not-allowed;}
+  &:hover {.hover()}
+  
+}
+
+.disabled, input[type=submit].disabled, input[type=submit][disabled], button.disabled, button[disabled] {
+  opacity:0.5; cursor:not-allowed;
+  &:hover {opacity:0.5;}
+}
+

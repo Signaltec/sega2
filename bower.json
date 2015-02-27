@@ -1,0 +1,23 @@
+{
+  "name": "sega2",
+  "version": "0.0.0",
+  "description": "sega2 css framework",
+  "main": "dist/sega2.css",
+  "authors": [
+    "ildarka"
+  ],
+  "license": "FREE",
+  "homepage": "signaltech.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sanitize.css": "~2.0.0",
+    "pt-sans": "*",
+    "fontawesome": "~4.3.0"
+  }
+}
