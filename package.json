@@ -7,7 +7,7 @@
   "devDependencies": {
     "gulp": "~3.8.6",
     "gulp-less": "~1.2.3",
-    "gulp-livereload": "~1.2.0",
+    "gulp-webserver": "~0.9.0",
     "gulp-watch": "~0.5.2"
   },
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://ildarka@gerrit.signaltec.ru:29418/gui2"
+    "url": "https://github.com/ildarka/sega2.git"
   },
   "author": "ildarka",
   "license": "FREE"

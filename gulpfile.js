@@ -4,16 +4,13 @@ var gulp = require('gulp'),
 
 var server = {
   host: 'localhost',
-  port: '8001'
+  port: '3000'
 }
 
 var path = { src: "src/", dst: "dist/" };
 
 gulp.task('copy', function () {
   gulp.src([path.src +'*.html']).pipe(gulp.dest(path.dst));
-  gulp.src(['bower_components/**']).pipe(gulp.dest(path.dst + 'bower_components'));
-
-
 });
 
 gulp.task('less', function () {
@@ -30,12 +27,12 @@ gulp.task('watch', function() {
 });
 
 gulp.task('webserver', function() {
-  gulp.src(path.dst)
+  gulp.src('.')
     .pipe(webserver({
       host:             server.host,
       port:             server.port,
       livereload:       true,
-      directoryListing: false
+      directoryListing: true
     }));
 });
 
