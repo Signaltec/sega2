@@ -1,6 +1,6 @@
 {
   "name": "sega2",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "sega2 css framework",
   "main": "dist/sega2.css",
   "authors": [
@@ -13,7 +13,18 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ],
+  
+  
   ],
   "dependencies": {
     "sanitize.css": "~2.0.0",
