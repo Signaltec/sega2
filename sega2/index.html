@@ -33,19 +33,25 @@
       <h2>О sega2</h2>
       <p>
       Sega2 это небольшая css-библиотека на основе Font Awesome, и шрифта PT Sans.
-      Базовый элемент — компонент, верстается тегом или классом, стили задаются в components.less. 
+      Базовый элемент — компонент, верстается тегом или классом, стили задаются в components.less.
+      Для сброса оформления по-умолчанию используется sanitize.css.
+      </p>  
+      <p>
       Вариации элемента задаются модификаторами (класс с префиксом «-»).
       Базовые модификаторы:
       </p>
 
       <ul>
        <li>Размера: -small, -mid, -big, -extra</li>
-       <li>Состояния: -disabled, -open, -active, -selected, -collapsed, -hidden, -visible</li>
+       <li>Состояния: -disabled, -active, -selected, -open, -collapsed, -hide, -visible</li>
        <li>Положения: -sticky</li>
        <li>Перекрытия: -ellipsis, -overflow-hidden</li>
+       <li>Приоритета: -misc</li>
+       <li>Ширина: narrow, mid, wide, full</li>
+
       </ul>
       <cite>
-        При создании кастомного модификатора, используется след. порядок: -sticky-header.
+        При создании кастомного модификатора, например, для -sticky используется след. порядок: -sticky-header.
       </cite>  
 
       <p>
@@ -71,18 +77,17 @@
         bower install sega2
       </code>
       
-      
-      Подключите на странице sega2 в виде css…
+      Подключите на своей странице sega2.css
       
       <code>
       &lt;link rel="stylesheet" href="bower_components/sega2/sega2.css" /&gt;
       </code>
       
-      или импортируйте себе файл "bower_components/sega2/src/sega2.less",
-      возможно придётся поправить в импорте css-файлов.
+      или импортируйте себе файл sega2.less,
+      скорее всего придётся в файле sega2.less поправить пути импорта css-файлов.
       
       <code>
-      @import "…/sega2/src/sega2.less";
+      @import "bower_components/sega2/less/sega2.less";
       </code>
     </section>  
 
@@ -97,11 +102,199 @@
       </p>
       
         <cite>
-          Если вы не можете объяснить это просто - значит, вы сами не понимаете этого до конца.
+          Если вы не можете объяснить это просто — значит, вы сами не понимаете этого до конца.
           <author>А. Энштейн</author>
         </cite>
         
     </section>  
+    
+    <section class="paper">
+  
+      <h2>Таблицы <b>.table</b></h2>
+      
+      <table class="table -hover">
+        <colgroup>
+            <col class="narrow">
+            <col class="narrow">
+            <col class="mid">
+            <col class="rate">
+            <col class="rate">            
+            <col class="narrow">
+            <col class="narrow">
+        </colgroup>
+      
+      <thead>
+      <tr class="headers">
+          <th>№</th> 
+          <th>&nbsp;</th> 
+          <th>Тип</th> 
+          <th>RX</th>
+          <th>TX</th>
+          <th>CRC</th>
+          <th>Dropped</th>
+      </tr>
+      </thead>
+
+      <tbody>        
+      <tr>
+
+        <td>1</td>
+
+        <td>
+          <label class="ios7-switch">
+              <input type="checkbox" checked>
+              <span></span>
+          </label>
+        </td>
+
+        <td>
+          <select><option value="10G" label="10G">10G</option><option value="1G" selected="selected" label="1G">1G</option><option value="40G" label="40G">40G</option></select>
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          100
+          </div>  
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          L3
+          </div>  
+        </td>
+
+        <td>
+        </td>
+
+        <td>
+        </td>
+        
+      </tr>
+      <tr>
+
+        <td>2</td>
+
+        <td>
+          <label class="ios7-switch">
+              <input type="checkbox" checked>
+              <span></span>
+          </label>
+        </td>
+
+        <td>
+          <select><option value="10G" label="10G">10G</option><option value="1G" selected="selected" label="1G">1G</option><option value="40G" label="40G">40G</option></select>
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          100
+          </div>  
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          L3
+          </div>  
+        </td>
+
+        <td>
+        </td>
+
+        <td>
+        </td>
+        
+      </tr>        
+      </tbody>
+    </table>
+        
+        <p>
+          <form>
+          Модификаторы: 
+          <ul>
+            <li><input type="checkbox" onclick="setMod('.table', '-auto', this.checked)"> -auto</li>
+            <li><input type="checkbox" checked onclick="setMod('.table', '-hover', this.checked)"> -hover</li>
+            <li><input type="checkbox" onclick="setMod('.table', '-split', this.checked)"> -split</li>
+            <li><input type="checkbox" onclick="setMod('.table', '-fixed', this.checked)"> -fixed</li>
+          </ul>
+
+          Ширина колонок: narrow, mid
+            
+          </form>  
+            
+        </p>
+        
+    </section>      
+
+    <section class="paper">
+  
+      <h2>Формы <b>.form</b></h2>
+      
+      <form class="form">
+        <div class="field">
+          <label>IP-адрес</label>
+          <input value="192.168.0.1" class="mid" type="text"/>
+          <span class="error">Неверный IP-адрес</span>
+        </div>
+
+        <div class="field">
+          <label>Пароль</label>
+          <input value="192.168.0.1" class="mid" type="password"/>
+        </div>
+
+        <div class="field">
+          <label>Маска подсети</label>
+          <select class="mid">
+            <option>
+                255.255.255.0
+            </option>
+          </select>
+        </div>
+        
+        <div class="field">
+          <label></label>
+          <input type="submit" value="Сохранить" />
+        </div>
+        
+        
+      </form>
+
+        
+        <p>
+          <form>
+          Модификаторы: 
+          <ul>
+            <li><input type="checkbox" onclick="setMod('.table', '-inline', this.checked)"> -inline</li>
+          </ul>
+            
+          </form>  
+            
+        </p>
+        
+    </section>      
+  
+  
+    
+    <section class="paper">
+  
+      <h2>Прочие компоненты</h2>
+      
+      Переключатель в стиле iOS 
+      <label class="ios7-switch">
+        <input type="checkbox" checked>
+        <span></span>
+      </label>
+      
+      <code style="">
+      &lt;label class="ios7-switch"&gt;
+        &lt;input type="checkbox" checked&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;/code&gt;
+    </section>      
   
   </main>
   

@@ -1,4 +1,8 @@
-html {vertical-align:baseline; font-size:1.1em}
+@import "grid.less";
+
+.hover() {opacity:0.8;}
+
+html {vertical-align:baseline; font-size:1.2em; line-height:1.4em}
 body {-webkit-font-smoothing: subpixel-antialiased;}
 
 h1, h2 {font-weight:normal}
@@ -16,7 +20,7 @@ cite {
   author {display: block; font-style: italic; margin-top:1em}
 }
 
-code {display: block; margin: 1em}
+code {display: block; margin: 0 0 1em 1em; white-space:pre-line; font-size:1.2em}
 
 th {font-weight: normal}
 
@@ -36,6 +40,18 @@ a {text-decoration: none; border-bottom:solid 1px; cursor:pointer;
   
 }
 
+// Поля ввода
+input[type="text"], input[type="password"], textarea, select {
+    height: 1.8em;
+    padding: .3em .3em 0.1em .3em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 100%;
+}
+
 .disabled, input[type=submit].disabled, input[type=submit][disabled], button.disabled, button[disabled] {
   opacity:0.5; cursor:not-allowed;
   &:hover {opacity:0.5;}
@@ -46,5 +62,17 @@ li {padding-top:0.3em; padding-bottom:0.3em}
 form li {list-style-type:none}
 
 // Базовые модификаторы
-.-indent-top {margin-top: 0.7em}
+.-open {display: block}
+.-hide {display: none}
+.-collapsed {display: none}
 
+.-indent-top {margin-top: @dx}
+.-indent-bottom {margin-bottom: @dx}
+
+.-misc {font-size:70%}
+
+// Ширина
+.narrow {width:3*@dx;}
+.mid {width:5*@dx}
+.wide {width:10 *@dx}
+.full {width:100%;}
