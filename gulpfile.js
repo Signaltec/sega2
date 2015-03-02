@@ -8,14 +8,11 @@ var server = {
   port: '3000'
 }
 
-var path = { src: "src/", dst: "dist/sega2" };
+var path = { src: "less/", dst: "sega2" };
 
 gulp.task('copy', function () {
-  gulp.src([path.src +'*.html']).pipe(gulp.dest(path.dst)).pipe(gulp.dest('./'));
+  gulp.src(['*.html']).pipe(gulp.dest(path.dst));
 
-  // Symlinks for development (flat structure)
-  //gulp.src('bower_components/**')
-  //.pipe(symlink.relative('../$'));
 });
 
 gulp.task('less', function () {
@@ -27,7 +24,7 @@ gulp.task('less', function () {
 
 gulp.task('watch', function() {
   gulp.watch([path.src + '*.less'], ['less']);
-  gulp.watch([path.src + '*.html'], ['copy']);
+  gulp.watch(['*.html'], ['copy']);
 });
 
 gulp.task('webserver', function() {
@@ -39,9 +36,6 @@ gulp.task('webserver', function() {
       directoryListing: true
     }));
 });
-
-
-
 
 // MAIN --------------
 gulp.task('development', ['copy', 'less', 'webserver', 'watch']);

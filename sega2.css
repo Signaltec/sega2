@@ -47,6 +47,7 @@ hr {
 }
 p {
   margin-bottom: 1em;
+  line-height: 1.4em;
 }
 .muted {
   opacity: 0.4 !important;
@@ -90,6 +91,16 @@ input[type=submit][disabled]:hover,
 button.disabled:hover,
 button[disabled]:hover {
   opacity: 0.5;
+}
+li {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+form li {
+  list-style-type: none;
+}
+.-indent-top {
+  margin-top: 0.7em;
 }
 body {
   background: #eeeeee;
