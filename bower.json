@@ -26,9 +26,10 @@
     "gulpfile.js",
     "package.json"
   ],
-  "dependencies": {
+  "devDependencies": {
     "sanitize.css": "~2.0.0",
     "pt-sans": "*",
+    "Stickyfill": "*",
     "fontawesome": "~4.3.0"
   }
 }

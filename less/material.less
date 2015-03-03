@@ -1,36 +1,14 @@
-@font: "PT Sans", sans-serif;
+@import "grid.less";
 
-@font-face { font-family: "PT Sans"; src: url('styles/fonts/PTS55F.ttf') format('truetype'), url("styles/fonts/PTS55F.eot"); }
+/* Z-indexes */
+.z1 {z-index: 1; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+.z2 {z-index: 2; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+.z3 {z-index: 3; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
 
-html {vertical-align:baseline; line-height: 1.4em}
-body {-webkit-font-smoothing: subpixel-antialiased;}
+.shadow {box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+.fly {box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
 
-h1, h2 {font-weight:normal}
-h1 {font-size:2em; margin:0 0 0.8em 0}
-h2 {font-size:1.5em; margin:1.2em 0 0.8em 0}
-
-cite {margin:0; padding:1.5em 1.5em 1.5em 5em; font-style:italic}
-
-th {font-weight: normal}
-
-hr {border: 0; height : 1px; background: rgba(0,0,0,0.2);}
-
-p {margin-bottom:0.5em;}
-
-.muted   {opacity:0.4 !important;}
-.nowrap  {white-space:nowrap;}
-.ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-
-a {text-decoration: none; border-bottom:solid 1px; cursor:pointer;
-  &.serv, &.pseudo-link { border-bottom-style: dotted; }
-  &.active { border: none; cursor: default;}
-  &.disabled { border: none; cursor:not-allowed;}
-  &:hover {.hover()}
-  
+.paper {
+  background:white; .z1(); padding:@dx;
+  &.-waste {margin-left:auto; margin-right:auto; width:70%; min-width:400px}
 }
-
-.disabled, input[type=submit].disabled, input[type=submit][disabled], button.disabled, button[disabled] {
-  opacity:0.5; cursor:not-allowed;
-  &:hover {opacity:0.5;}
-}
-

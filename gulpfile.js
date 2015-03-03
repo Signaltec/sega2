@@ -5,26 +5,19 @@ var gulp = require('gulp'),
 
 var server = {
   host: 'localhost',
-  port: '3000'
+  port: '3001'
 }
 
-var path = { src: "less/", dst: "sega2" };
-
-gulp.task('copy', function () {
-  gulp.src(['*.html']).pipe(gulp.dest(path.dst));
-
-});
+var path = { src: "less/", dst: "." };
 
 gulp.task('less', function () {
   gulp.src([path.src + 'sega2.less'])
     .pipe(less())
-    .pipe(gulp.dest(path.dst))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest(path.dst));
 });
 
 gulp.task('watch', function() {
   gulp.watch([path.src + '*.less'], ['less']);
-  gulp.watch(['*.html'], ['copy']);
 });
 
 gulp.task('webserver', function() {
@@ -38,6 +31,6 @@ gulp.task('webserver', function() {
 });
 
 // MAIN --------------
-gulp.task('development', ['copy', 'less', 'webserver', 'watch']);
-gulp.task('build', ['copy', 'less']);
+gulp.task('development', ['less', 'webserver', 'watch']);
+gulp.task('build', ['less']);
 gulp.task('default', ['development']);

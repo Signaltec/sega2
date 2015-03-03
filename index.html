@@ -6,17 +6,16 @@
 </head>
 
 <body ng-app="app">
-  <header>
-    <h1>sega2 css framework</h1>
+  <header class="-mid">
+   
   </header>
   
-  <main class="padding-big">
+  <main class="-overhead">
 
-    <section class="paper">
-        <h2>&lt;header&gt;</h2>
+    <section class="paper -waste">
+        <h2>Модификаторы тега &lt;header&gt;</h2>
         
-         <form>
-         Модификаторы:
+         <form name="header">
          <ul class="-unstyled">
            <li><input type="radio" name="h_size" value="" onclick="setMod('header',this.value)" /> Обычный размер</li>
            <li><input type="radio" name="h_size" value="-mid" onclick="setMod('header',this.value)"/> Средний размер -mid</li>
@@ -25,9 +24,12 @@
            <li class="-indent-top"><input type="checkbox" onclick="setMod('header', '-sticky', this.checked)" /> Прилепленный -sticky</li>
          </ul>
          </form>   
-     
     </section>  
-
+    
+    <hgroup class="-sticky">
+      <h1 style="text-align:center">sega2 css framework</h1>
+    </hgroup>
+    
     <section class="paper">
 
       <h2>О sega2</h2>
@@ -294,27 +296,44 @@
         &lt;span&gt;&lt;/span&gt;
       &lt;/label&gt;
       &lt;/code&gt;
-    </section>      
+    </section>
+  </div>
   
   </main>
   
   <footer>
     © Signaltech 2015
   </footer>
-  <script>
-  function toggle(el, className) {
-    
-    if(el) {
-      el = document.querySelector(el);
-      if(el.className.indexOf(className)) {
-        el.className = el.className.replace(className, '');
-      } else {
-        el.className += ' ' + className;
-      }
-      //el.className = className;
-   }
+
   
-}
+  <script src="lib/Stickyfill/dist/stickyfill.min.js"></script>  
+
+  <script>
+
+  </script>
+  
+  <script>
+    header.h_size.value = '-mid';
+    refresh_sticky();
+    
+    function refresh_sticky() {
+      var e = document.querySelectorAll('.-sticky');
+      for (var i = e.length - 1; i >= 0; i--) {
+          Stickyfill.add(e[i]);
+      }
+    }
+    
+    function toggle(el, className) {
+      if(el) {
+        el = document.querySelector(el);
+        if(el.className.indexOf(className)) {
+          el.className = el.className.replace(className, '');
+        } else {
+          el.className += ' ' + className;
+        }
+        //el.className = className;
+      }
+    }
 
   function setMod(el, className, flag) {
       el = document.querySelector(el);
@@ -324,6 +343,8 @@
       } else {
         if (flag)  el.className += ' ' + className; else el.className = el.className.replace(className, '');
       }
+      
+      refresh_sticky();
     }
 
     
