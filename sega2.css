@@ -26,7 +26,7 @@
   border-top: solid 1px #dddddd;
 }
 .-border-bottom {
-  border-top: solid 1px #dddddd;
+  border-bottom: solid 1px #dddddd;
 }
 main {
   position: relative;
