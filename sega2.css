@@ -2,29 +2,6 @@
 @import "lib/pt-sans/styles/pt_sans.css";
 @import "lib/fontawesome/css/font-awesome.min.css";
 @import "lib/ios7switch.css";
-.-indent-top {
-  margin-top: 2em;
-}
-.-indent-bottom {
-  margin-bottom: 2em;
-}
-.-paddings {
-  padding: 2em;
-}
-.-nopaddings {
-  padding: 0;
-}
-.-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.-overhead {
-  margin-top: -4em;
-}
-main {
-  position: relative;
-}
 html {
   vertical-align: baseline;
   font-size: 1.2em;
@@ -44,6 +21,10 @@ h1 {
 h2 {
   font-size: 1.7em;
   margin: 1.2em 0 0.8em 0;
+}
+h3 {
+  font-size: 1.5em;
+  margin: 1em 0 0.4em 0;
 }
 hgroup {
   padding: 2em;
@@ -71,7 +52,7 @@ code {
   font-size: 1.2em;
 }
 th {
-  font-weight: normal;
+  font-weight: bold;
 }
 hr {
   border: 0;
@@ -161,10 +142,10 @@ form li {
   font-size: 70%;
 }
 .narrow {
-  width: 6em;
+  width: 2em;
 }
 .mid {
-  width: 10em;
+  width: 6em;
 }
 .wide {
   width: 20em;
@@ -179,6 +160,29 @@ body {
 header {
   background: #0066cc;
   color: #ffffff;
+}
+.-indent-top {
+  margin-top: 2em;
+}
+.-indent-bottom {
+  margin-bottom: 2em;
+}
+.-paddings {
+  padding: 2em;
+}
+.-nopaddings {
+  padding: 0;
+}
+.-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.-overhead {
+  margin-top: -4em;
+}
+main {
+  position: relative;
 }
 /* Z-indexes */
 .z1 {
@@ -201,7 +205,6 @@ header {
 }
 .paper {
   background: white;
-  z-index: 1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 2em;
 }
@@ -343,4 +346,7 @@ input[type=submit].active:hover {
 .table th {
   padding: 0.4em 0.5em;
   vertical-align: top;
+}
+.table .-border-top {
+  border-top: solid 1px #dddddd;
 }
