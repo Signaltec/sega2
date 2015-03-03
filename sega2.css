@@ -2,6 +2,35 @@
 @import "lib/pt-sans/styles/pt_sans.css";
 @import "lib/fontawesome/css/font-awesome.min.css";
 @import "lib/ios7switch.css";
+.-indent-top {
+  margin-top: 2em;
+}
+.-indent-bottom {
+  margin-bottom: 2em;
+}
+.-paddings {
+  padding: 2em;
+}
+.-nopaddings {
+  padding: 0;
+}
+.-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.-overhead {
+  margin-top: -4em;
+}
+.-border-top {
+  border-top: solid 1px #dddddd;
+}
+.-border-bottom {
+  border-top: solid 1px #dddddd;
+}
+main {
+  position: relative;
+}
 html {
   vertical-align: baseline;
   font-size: 1.2em;
@@ -160,29 +189,6 @@ body {
 header {
   background: #0066cc;
   color: #ffffff;
-}
-.-indent-top {
-  margin-top: 2em;
-}
-.-indent-bottom {
-  margin-bottom: 2em;
-}
-.-paddings {
-  padding: 2em;
-}
-.-nopaddings {
-  padding: 0;
-}
-.-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.-overhead {
-  margin-top: -4em;
-}
-main {
-  position: relative;
 }
 /* Z-indexes */
 .z1 {
@@ -346,7 +352,4 @@ input[type=submit].active:hover {
 .table th {
   padding: 0.4em 0.5em;
   vertical-align: top;
-}
-.table .-border-top {
-  border-top: solid 1px #dddddd;
 }
