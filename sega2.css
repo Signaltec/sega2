@@ -10,38 +10,49 @@ header {
   background: #2466a9;
   color: #ffffff;
 }
-.с1 {
+.c1 {
   width: 2em;
 }
-.с2 {
+.c2 {
   width: 4em;
 }
-.с3 {
+.c3 {
   width: 6em;
 }
-.с4 {
+.c4 {
   width: 8em;
 }
-.с5 {
+.c5 {
   width: 10em;
 }
-.с6 {
+.c6 {
   width: 12em;
 }
+.c7 {
+  width: 14em;
+}
 .-indent-top {
-  margin-top: 1em;
+  margin-top: 1em !important;
 }
 .-indent-bottom {
-  margin-bottom: 1em;
+  margin-bottom: 1em !important;
+}
+.-indent {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+.-indent-big {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
 }
 .-paddings {
-  padding: 2em;
+  padding: 2em !important;
 }
 .-nopaddings {
-  padding: 0;
+  padding: 0 !important;
 }
 .-nomargins {
-  margin: 0;
+  margin: 0 !important;
 }
 .-border-top {
   border-top: solid 1px #dddddd;
@@ -77,6 +88,16 @@ header {
 .shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+[ng-cloak],
+.ng-cloak {
+  display: none;
+}
+[ng-click] {
+  cursor: pointer;
+}
+.-block {
+  display: block;
+}
 .-sticky {
   position: sticky;
   top: 0;
@@ -99,6 +120,18 @@ header {
 .-fly {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before {
+  content: '';
+  display: block;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
 html {
   vertical-align: baseline;
   font-size: 1.1em;
@@ -119,7 +152,7 @@ h2 {
   margin: 1.2em 0 0.8em 0;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 1em 0 0.4em 0;
 }
 hgroup {
@@ -173,44 +206,32 @@ a.disabled {
   border: none;
   cursor: not-allowed;
 }
+a:link {
+  color: #0086e4;
+}
 a:hover {
   opacity: 1;
 }
-input[type="text"],
-input[type="password"],
-textarea,
-select {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-shadow: none;
-  border-radius: 2px;
-  font-size: 0.9em;
+dl {
+  padding: 5px 0 5px 0;
+  zoom: 1;
 }
-input[type="text"],
-input[type="password"],
-textarea {
-  padding: .3em .3em 0.1em .3em;
+dl:before {
+  content: '';
+  display: block;
 }
-input[type="text"],
-input[type="password"],
-select {
-  height: 1.8em;
+dl:after {
+  content: '';
+  display: table;
+  clear: both;
 }
-.disabled,
-input[type=submit].disabled,
-input[type=submit][disabled],
-button.disabled,
-button[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed;
+dl dt {
+  float: left;
+  margin-right: 1em;
+  min-height: 1em;
 }
-.disabled:hover,
-input[type=submit].disabled:hover,
-input[type=submit][disabled]:hover,
-button.disabled:hover,
-button[disabled]:hover {
-  opacity: 0.5;
+dl dd {
+  min-height: 1.4em;
 }
 li {
   padding-top: 0.3em;
@@ -256,6 +277,82 @@ ul.-unstyled {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .hover {
   opacity: 1;
@@ -396,28 +493,52 @@ input[type=submit].disabled:hover {
   opacity: 0.5;
   cursor: not-allowed;
 }
-button.small,
-.button.small,
-input[type=submit].small {
-  height: 30px;
-  line-height: 30px;
-}
-button.xsmall,
-.button.xsmall,
-input[type=submit].xsmall {
-  height: 24px;
-  line-height: 24px;
-}
-button.active,
-.button.active,
-input[type=submit].active {
+button.-active,
+.button.-active,
+input[type=submit].-active {
   box-shadow: inset 3px 5px 10px -6px rgba(0, 0, 0, 0.5), inset 0px 0px 10px 30px rgba(0, 0, 0, 0.05);
   cursor: default;
 }
-button.active:hover,
-.button.active:hover,
-input[type=submit].active:hover {
+button.-active:hover,
+.button.-active:hover,
+input[type=submit].-active:hover {
   opacity: 1;
+}
+.radio,
+.buttons {
+  display: inline-block;
+}
+.radio.-block,
+.buttons.-block {
+  display: block;
+}
+.radio button,
+.buttons button,
+.radio .button,
+.buttons .button {
+  position: relative;
+  margin: 0;
+  border-radius: 0;
+}
+.radio button:first-child,
+.buttons button:first-child,
+.radio .button:first-child,
+.buttons .button:first-child {
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.radio button:last-child,
+.buttons button:last-child,
+.radio .button:last-child,
+.buttons .button:last-child {
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.radio button + button,
+.buttons button + button {
+  border-left: none;
 }
 .form .field {
   margin-bottom: 1em;
@@ -433,6 +554,42 @@ input[type=submit].active:hover {
   display: block;
   margin-bottom: 0.2em;
 }
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: .3em .3em 0.1em .3em;
+}
+input[type="text"],
+input[type="password"],
+select {
+  height: 1.8em;
+}
+.disabled,
+input[type=submit].disabled,
+input[type=submit][disabled],
+button.disabled,
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.disabled:hover,
+input[type=submit].disabled:hover,
+input[type=submit][disabled]:hover,
+button.disabled:hover,
+button[disabled]:hover {
+  opacity: 0.5;
+}
 .table {
   width: 100%;
   margin: 0;
@@ -445,11 +602,11 @@ input[type=submit].active:hover {
 .table.-auto {
   width: auto;
 }
-.table.-fixed {
+.table.-table-fixed {
   table-layout: fixed;
 }
 .table.-hover tbody tr:hover {
-  background: #eeeeee;
+  background: #f6f6f6;
 }
 .table.-split tr {
   border-bottom: solid 1px #dddddd;
@@ -464,4 +621,16 @@ input[type=submit].active:hover {
 .table th {
   padding: 0.4em 0.5em;
   vertical-align: top;
+}
+.tap {
+  padding: 7px 10px 5px 10px;
+}
+.tap a {
+  border-bottom: dotted 1px #000000;
+}
+.tap.-active {
+  background: #f6f8e5;
+  color: rbga(0, 0, 0, 0.7);
+  border-radius: 1.2em;
+  box-shadow: inset 0 1px 7px -1px rgba(0, 0, 0, 0.2);
 }

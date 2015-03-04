@@ -3,20 +3,23 @@
 @dx: 2em;
 
 // Колонки
-.с1 {width:@dx;}
-.с2 {width:2*@dx}
-.с3 {width:3*@dx}
-.с4 {width:4*@dx}
-.с5 {width:5*@dx}
-.с6 {width:6*@dx}
+.c1 {width:@dx;}
+.c2 {width:2*@dx}
+.c3 {width:3*@dx}
+.c4 {width:4*@dx}
+.c5 {width:5*@dx}
+.c6 {width:6*@dx}
+.c7 {width:7*@dx}
 
 // Отступы
-.-indent-top {margin-top: @dx/2}
-.-indent-bottom {margin-bottom: @dx/2}
+.-indent-top {margin-top: @dx/2 !important;}
+.-indent-bottom {margin-bottom: @dx/2 !important;}
+.-indent     {.-indent-top(); .-indent-bottom(); }
+.-indent-big {margin-top: @dx !important; margin-bottom:@dx !important;}
 
-.-paddings {padding:@dx}
-.-nopaddings {padding:0}
-.-nomargins {margin:0}
+.-paddings {padding:@dx !important;}
+.-nopaddings {padding:0 !important;}
+.-nomargins {margin:0 !important;}
 
 // Бордеры
 .-border-top {border-top:solid 1px @border-color}
@@ -41,12 +44,16 @@
 // Shadows
 .shadow {box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
 
+// AngularJS
+[ng-cloak],.ng-cloak {display:none;}
+[ng-click] {cursor:pointer;}
+
 // Модификаторы положения
+.-block {display: block}
 .-sticky {position: sticky; top:0; z-index:10}
 .-fixed {position: fixed; top:0; z-index:10}
 .-relative {position: relative}
 .-absolute {position: absolute}
-
 .-overhead {margin-top: -2*@dx}
-
 .-fly {box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+

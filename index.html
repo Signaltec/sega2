@@ -34,28 +34,40 @@
 
       <h2>О sega2</h2>
       <p>
-      Sega2 это небольшая css-библиотека на основе Font Awesome, и шрифта PT Sans.
+      Sega2 — небольшая css-библиотека.
+		  
       Базовый элемент — компонент, верстается тегом или классом, стили задаются в components.less.
       Для сброса оформления по-умолчанию используется sanitize.css.
       </p>  
       <p>
       Вариации элемента задаются модификаторами (класс с префиксом «-»).
-      Базовые модификаторы:
       </p>
 
-      <ul>
+      Базовые модификаторы:
+	<ul>
        <li>Размера: -small, -mid, -big, -extra</li>
        <li>Состояния: -disabled, -active, -selected, -open, -collapsed, -hide, -visible</li>
        <li>Положения: -sticky, -fixed</li>
        <li>Перекрытия: -ellipsis, -overflow-hidden</li>
        <li>Приоритета: -misc</li>
-       <li>Ширина: c1, c2, c3,…, -full</li>
-
+       <li class="-indent-top">Колонки: c1, c2, c3,…, -full</li>
       </ul>
+
       <cite>
         При создании кастомного модификатора, например, для -sticky используется след. порядок: -sticky-header.
       </cite>  
+	<p>	
+      Зависимости:
+	</p>
+	<ul>
+		<li><a href="https://github.com/ZDroid/sanitize.css">Sanitize.css</a></li>
+		<li><a href="https://github.com/stones/bower-pt-sans">PT-Sans</a></li>
+		<li><a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome</a></li>
+		<li><a href="https://github.com/wilddeer/stickyfill">Stickyfill</a></li>
+		<li>ios7switch</li>
 
+      </ul>
+		
       <p>
       Библиотека построена на less-файлах:
       </p>
@@ -101,7 +113,9 @@
         Минимальное количество стилей для заголовков, параграфа,
         тегов cite, code, ul.
       </p>
-      
+  
+      <h3>И разные штучки</h3>
+		
         <cite>
           Если вы не можете объяснить это просто — значит, вы сами не понимаете этого до конца.
           <author>А. Энштейн</author>
@@ -115,9 +129,9 @@
       
       <table class="table -hover">
         <colgroup>
+            <col class="c1">
+            <col class="c1">
             <col class="c2">
-            <col class="c2">
-            <col class="c5">
             <col class="c5">
             <col class="c5">            
             <col>
@@ -215,15 +229,17 @@
         <p>
           <form>
           Модификаторы: 
-          <ul class="-unstyled">
+          <ul class="-unstyled -indent-top">
             <li><input type="checkbox" onclick="setMod('.table', '-auto', this.checked)"> -auto</li>
             <li><input type="checkbox" checked onclick="setMod('.table', '-hover', this.checked)"> -hover</li>
             <li><input type="checkbox" onclick="setMod('.table', '-split', this.checked)"> -split</li>
-            <li><input type="checkbox" onclick="setMod('.table', '-fixed', this.checked)"> -fixed</li>
+            <li><input type="checkbox" onclick="setMod('.table', '-table-fixed', this.checked)"> -table-fixed</li>
           </ul>
 
+		  <p>	  
           Ширина колонок: c1, c2, …
-            
+		  </p>
+			  
           </form>  
             
         </p>
@@ -246,19 +262,39 @@
 		<input type="submit" value="Сохранить" />
         
    		<button class="-small">-small</button>
-     
-		
-      </form>
 
-        
-        <p>
-          Модификаторы: 
-          <ul class="-unstyled">
-            <li><input type="checkbox" onclick="setMod('.table', '-inline', this.checked)"> -inline</li>
-          </ul>
 
-        </p>
-        
+		<div class="buttons -indent-big -block">
+				<button>1</button><button class="-active">2</button><button>3</button>
+		</div>
+	
+		<p class="-indent-top">
+			<span class="tap">
+				<a>Выбери .tap</a>
+			</span>
+	
+			<span class="tap -active">
+				.tap -active
+			</span>	
+		</p>
+	
+	
+		<p>
+      Переключатель в стиле iOS 
+      <label class="ios7-switch">
+        <input type="checkbox" checked>
+        <span></span>
+      </label>
+      
+      <code style="">
+      &lt;label class="ios7-switch"&gt;
+        &lt;input type="checkbox" checked&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;/code&gt;
+	  </code>	  
+		</p>
+	
     </section>
 	
 	
@@ -270,18 +306,18 @@
       <form class="form">
         <div class="field">
           <label>IP-адрес</label>
-          <input value="192.168.0.1" class="mid" type="text"/>
+          <input value="192.168.0.1" class="c6" type="text"/>
           <span class="error">Неверный IP-адрес</span>
         </div>
 
         <div class="field">
           <label>Пароль</label>
-          <input value="192.168.0.1" class="mid" type="password"/>
+          <input value="192.168.0.1" class="c6" type="password"/>
         </div>
 
         <div class="field">
           <label>Маска подсети</label>
-          <select class="mid">
+          <select class="c6">
             <option>
                 255.255.255.0
             </option>
@@ -306,23 +342,11 @@
         </p>
         
     </section>      
-    <section class="paper">
+ 
+   <section class="paper">
   
       <h2>Прочие компоненты</h2>
       
-      Переключатель в стиле iOS 
-      <label class="ios7-switch">
-        <input type="checkbox" checked>
-        <span></span>
-      </label>
-      
-      <code style="">
-      &lt;label class="ios7-switch"&gt;
-        &lt;input type="checkbox" checked&gt;
-        &lt;span&gt;&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;/code&gt;
-	  </code>	  
     </section>
   
   
