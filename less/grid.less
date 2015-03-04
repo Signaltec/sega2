@@ -1,15 +1,30 @@
 @dx: 2em;
 
-.-indent-top {margin-top: @dx}
-.-indent-bottom {margin-bottom: @dx}
+main {position:relative}
+
+.-indent-top {margin-top: @dx/2}
+.-indent-bottom {margin-bottom: @dx/2}
 .-paddings {padding:@dx}
 .-nopaddings {padding:0}
+.-nomargins {margin:0}
 
 .-sticky {position: sticky; top:0; z-index:10}
 .-overhead {margin-top: -2*@dx}
 
 .-border-top {border-top:solid 1px #ddd}
 .-border-bottom {border-bottom:solid 1px #ddd}
+.-border-dashed {border:dashed 1px #ddd}
 
-main {position:relative}
+.-full {width:100%}
 
+.flexbox {
+  display: -webkit-flex;
+  display: flex;	
+}
+
+.flexbox > div {
+  //display: flex;
+	flex:1
+}
+
+.-flex-wrap {flex-wrap: wrap }

@@ -10,5 +10,16 @@
 
 .paper {
   background:white; .shadow(); padding:@dx;
+	
   &.-waste {margin-left:auto; margin-right:auto; width:70%; min-width:400px}
+  &.-nopaddings {padding:0}
+  &.-nopaddings hgroup {padding:@dx}	
+  &.-paddings-small {padding:@dx/2}	
+  
+  &.z2{.z2()}
+  &.z3{.z3()}
+
+  &.-selected {margin-bottom:2px; z-index:4; box-shadow: 0 2px 20px rgba(0,0,0,0.5);}
+  &.-disabled {color: rgba(0,0,0,0.3)}
+
 }

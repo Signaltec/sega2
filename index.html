@@ -277,9 +277,6 @@
         </p>
         
     </section>      
-  
-  
-    
     <section class="paper">
   
       <h2>Прочие компоненты</h2>
@@ -296,7 +293,125 @@
         &lt;span&gt;&lt;/span&gt;
       &lt;/label&gt;
       &lt;/code&gt;
+	  </code>	  
     </section>
+  
+  
+	<section class="paper -waste -nopaddings" style="margin-top: 3em; margin-bottom:3em">
+		<hgroup>
+			<h1>Верстка для блока содержащего несколько paper'ов</h1>
+			<p>
+			Используется в правилах pussy_switch
+			</p>
+		</hgroup>
+		
+		
+		<article class="paper rule0 -paddings-small">
+			<h2 class="-nomargins">Правило № 0</h2>
+			<div class="flexbox -flex-wrap -full -indent-top">
+				
+				<div>
+					<div class="-misc">Входные порты</div>
+				</div>
+				
+				<div>
+					<a class="pseudo-link">Агрегация</a>
+				</div>
+				<div>
+					<div class="-misc">Выходные порты</div>
+				</div>
+				<div>
+					<ul class="-unstyled -misc">
+					<li class="-indent-bottom">
+					<label class="ios7-switch">
+					  <input type="checkbox" checked onclick="setMod('.rule0', '-disabled', !this.checked)">
+					  <span></span>
+						</label> 
+						</li>
+					</ul>	
+				</div>
+			</div>
+		</article>
+		
+		<article class="paper -selected -paddings-small" style="position: relative">
+			<h2 class="-nomargins">Правило № 1</h2>
+
+			<div style="position:absolute; right:15px; top:15px; width:170px">
+					<ul class="-unstyled -misc">
+					<li class="-indent-bottom">
+					<label class="ios7-switch">
+					  <input type="checkbox" checked>
+					  <span></span>
+						</label> 
+						</li>
+						<li><a class="pseudo-link"><i class="fa fa-arrow-up"></i> Больше приоритет</a><li>
+						<li><a class="pseudo-link"><i class="fa fa-arrow-down"></i> Меньше приоритет</a><li>
+						<li><a class="pseudo-link"><i class="fa fa-copy"></i> Дублировать</a><li>
+						<li class="-indent-top"><a class="pseudo-link"><i class="fa fa-trash"></i> Удалить</a><li>
+						
+					</ul>	
+			</div>
+			
+			<div class="flexbox -flex-wrap -indent-top" style="padding-right:170px">
+				<div style="padding-right:15px">
+					<div class="-misc">Входные порты</div>
+					<div class="-border-dashed -paddings -indent-top" class="margin-right:10px">
+					
+					</div>	
+					
+				</div>
+				
+				<div>
+					<a class="pseudo-link">Агрегация</a>
+				</div>
+				<div style="padding-right:15px">
+
+					<div class="-misc">Выходные порты</div>
+					
+					<div class="-border-dashed -paddings -indent-top" class="margin-right:10px">
+					
+					</div>	
+					
+					
+				</div>
+			</div>	
+		</article>
+		<article class="paper -disabled" style="position:relative">
+			<h2 class="-nomargins">Правило № 2</h2>
+			<div style="position:absolute; right:15px; top:15px; width:170px">
+					<ul class="-unstyled -misc">
+					<li class="-indent-bottom">
+					<label class="ios7-switch">
+					  <input type="checkbox">
+					  <span></span>
+						</label> Выключено
+						</li>
+					</ul>	
+				</div>
+
+			<div class="flexbox -flex-wrap -full -indent-top">
+				<div>
+					<div class="-misc">Входные порты</div>
+				</div>
+				
+				<div>
+					<a class="pseudo-link">Агрегация</a>
+				</div>
+				<div>
+					<div class="-misc">Выходные порты</div>
+				</div>
+			</div>
+			
+		</article>
+		<article class="paper">
+			<h2 class="-nomargins">Правило № 3</h2>
+		</article>
+		
+	
+	</section>  
+
+	
+    
   </div>
   
   </main>
