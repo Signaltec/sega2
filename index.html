@@ -26,7 +26,7 @@
          </form>   
     </section>  
     
-    <hgroup class="-sticky">
+    <hgroup class="-sticky" style="background: #eee; padding:10px">
       <h1 style="text-align:center">sega2 css framework</h1>
     </hgroup>
     
@@ -46,10 +46,10 @@
       <ul>
        <li>Размера: -small, -mid, -big, -extra</li>
        <li>Состояния: -disabled, -active, -selected, -open, -collapsed, -hide, -visible</li>
-       <li>Положения: -sticky</li>
+       <li>Положения: -sticky, -fixed</li>
        <li>Перекрытия: -ellipsis, -overflow-hidden</li>
        <li>Приоритета: -misc</li>
-       <li>Ширина: narrow, mid, wide, full</li>
+       <li>Ширина: c1, c2, c3,…, -full</li>
 
       </ul>
       <cite>
@@ -61,10 +61,9 @@
       </p>
       <ul>
        <li>less/colors.less — цветовая гамма</li>
-       <li>less/grid.less — сетка</li>
+       <li>less/grid.less — сетка, отступы</li>
        <li>less/typographic.less — заголовки и прочее</li>
-       <li>less/components.less — таблицы, формы, хидер, футер и т. д.</li>
-       <li>less/material.less — тени и некоторые базовые элементы из material design</li>
+       <li>less/components.less — таблицы, формы, хидер, футер, кнопки и т. д.</li>
      </ul>
      
     </section>  
@@ -116,13 +115,13 @@
       
       <table class="table -hover">
         <colgroup>
-            <col class="narrow">
-            <col class="narrow">
-            <col class="mid">
-            <col class="rate">
-            <col class="rate">            
-            <col class="narrow">
-            <col class="narrow">
+            <col class="c2">
+            <col class="c2">
+            <col class="c5">
+            <col class="c5">
+            <col class="c5">            
+            <col>
+            <col>
         </colgroup>
       
       <thead>
@@ -216,14 +215,14 @@
         <p>
           <form>
           Модификаторы: 
-          <ul>
+          <ul class="-unstyled">
             <li><input type="checkbox" onclick="setMod('.table', '-auto', this.checked)"> -auto</li>
             <li><input type="checkbox" checked onclick="setMod('.table', '-hover', this.checked)"> -hover</li>
             <li><input type="checkbox" onclick="setMod('.table', '-split', this.checked)"> -split</li>
             <li><input type="checkbox" onclick="setMod('.table', '-fixed', this.checked)"> -fixed</li>
           </ul>
 
-          Ширина колонок: narrow, mid
+          Ширина колонок: c1, c2, …
             
           </form>  
             
@@ -231,6 +230,38 @@
         
     </section>      
 
+    <section class="paper">
+  
+      <h2>Кнопки <b>button, . button, [type=submit]</b></h2>
+
+		<button>Привет</button>
+
+		<button class="-yellow">-yellow</button>
+		<button class="-blue">-blue</button>
+		<button class="-green -rounded"><i class="fa fa-check"></i> -green -rounded</button>
+		<button class="-yellow -round"><i class="fa fa-plus"></i></button>
+		
+		<a class="button">.button</a>
+
+		<input type="submit" value="Сохранить" />
+        
+   		<button class="-small">-small</button>
+     
+      </form>
+
+        
+        <p>
+          Модификаторы: 
+          <ul class="-unstyled">
+            <li><input type="checkbox" onclick="setMod('.table', '-inline', this.checked)"> -inline</li>
+          </ul>
+
+        </p>
+        
+    </section>
+	
+	
+	
     <section class="paper">
   
       <h2>Формы <b>.form</b></h2>
@@ -266,14 +297,11 @@
 
         
         <p>
-          <form>
           Модификаторы: 
-          <ul>
+          <ul class="-unstyled">
             <li><input type="checkbox" onclick="setMod('.table', '-inline', this.checked)"> -inline</li>
           </ul>
-            
-          </form>  
-            
+
         </p>
         
     </section>      
@@ -306,10 +334,20 @@
 		</hgroup>
 		
 		
-		<article class="paper rule0 -paddings-small">
+		<article class="paper rule0 -paddings-small -relative" style="position:relative">
 			<h2 class="-nomargins">Правило № 0</h2>
+			<div style="position:absolute; right:15px; top:15px; width:170px">
+					<ul class="-unstyled -misc">
+					<li class="-indent-bottom">
+					<label class="ios7-switch">
+					  <input type="checkbox" checked onclick="setMod('.rule0', '-disabled', !this.checked)">
+					  <span></span>
+						</label> Выключено
+						</li>
+					</ul>	
+			</div>
+			
 			<div class="flexbox -flex-wrap -full -indent-top">
-				
 				<div>
 					<div class="-misc">Входные порты</div>
 				</div>
@@ -319,16 +357,6 @@
 				</div>
 				<div>
 					<div class="-misc">Выходные порты</div>
-				</div>
-				<div>
-					<ul class="-unstyled -misc">
-					<li class="-indent-bottom">
-					<label class="ios7-switch">
-					  <input type="checkbox" checked onclick="setMod('.rule0', '-disabled', !this.checked)">
-					  <span></span>
-						</label> 
-						</li>
-					</ul>	
 				</div>
 			</div>
 		</article>
@@ -387,7 +415,7 @@
 						</label> Выключено
 						</li>
 					</ul>	
-				</div>
+			</div>
 
 			<div class="flexbox -flex-wrap -full -indent-top">
 				<div>
@@ -402,9 +430,6 @@
 				</div>
 			</div>
 			
-		</article>
-		<article class="paper">
-			<h2 class="-nomargins">Правило № 3</h2>
 		</article>
 		
 	

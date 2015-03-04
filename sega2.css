@@ -2,9 +2,106 @@
 @import "lib/pt-sans/styles/pt_sans.css";
 @import "lib/fontawesome/css/font-awesome.min.css";
 @import "lib/ios7switch.css";
+body {
+  background: #eeeeee;
+  color: #000000;
+}
+header {
+  background: #2466a9;
+  color: #ffffff;
+}
+.с1 {
+  width: 2em;
+}
+.с2 {
+  width: 4em;
+}
+.с3 {
+  width: 6em;
+}
+.с4 {
+  width: 8em;
+}
+.с5 {
+  width: 10em;
+}
+.с6 {
+  width: 12em;
+}
+.-indent-top {
+  margin-top: 1em;
+}
+.-indent-bottom {
+  margin-bottom: 1em;
+}
+.-paddings {
+  padding: 2em;
+}
+.-nopaddings {
+  padding: 0;
+}
+.-nomargins {
+  margin: 0;
+}
+.-border-top {
+  border-top: solid 1px #dddddd;
+}
+.-border-bottom {
+  border-bottom: solid 1px #dddddd;
+}
+.-border-dashed {
+  border: dashed 1px #dddddd;
+}
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+}
+.flexbox > div {
+  flex: 1;
+}
+.-flex-wrap {
+  flex-wrap: wrap;
+}
+.-z1 {
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.-z2 {
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.-z3 {
+  z-index: 3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.-relative {
+  position: relative;
+}
+.-absolute {
+  position: absolute;
+}
+.-overhead {
+  margin-top: -4em;
+}
+.-fly {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 html {
   vertical-align: baseline;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 body {
   -webkit-font-smoothing: subpixel-antialiased;
@@ -50,9 +147,6 @@ code {
   white-space: pre-line;
   font-size: 1.2em;
 }
-th {
-  font-weight: bold;
-}
 hr {
   border: 0;
   height: 1px;
@@ -61,17 +155,6 @@ hr {
 p {
   margin-bottom: 1em;
   line-height: 1.4em;
-}
-.muted {
-  opacity: 0.4 !important;
-}
-.nowrap {
-  white-space: nowrap;
-}
-.ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 a {
   text-decoration: none;
@@ -97,14 +180,22 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-  height: 1.8em;
-  padding: .3em .3em 0.1em .3em;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-shadow: none;
   border-radius: 2px;
-  font-size: 100%;
+  font-size: 0.9em;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: .3em .3em 0.1em .3em;
+}
+input[type="text"],
+input[type="password"],
+select {
+  height: 1.8em;
 }
 .disabled,
 input[type=submit].disabled,
@@ -125,9 +216,6 @@ li {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
-form li {
-  list-style-type: none;
-}
 ul.-unstyled {
   margin: 0;
   padding: 0;
@@ -147,136 +235,35 @@ ul.-unstyled {
 .-misc {
   font-size: 70%;
 }
-.narrow {
-  width: 2em;
+.-nowrap {
+  white-space: nowrap;
 }
-.mid {
-  width: 6em;
+.-muted {
+  opacity: 0.4 !important;
 }
-.wide {
-  width: 20em;
+.-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.full {
-  width: 100%;
+.nowrap {
+  white-space: nowrap;
 }
-body {
-  background: #eeeeee;
-  color: #000000;
+.muted {
+  opacity: 0.4 !important;
 }
-header {
-  background: #0066cc;
-  color: #ffffff;
-}
-main {
-  position: relative;
-}
-.-indent-top {
-  margin-top: 1em;
-}
-.-indent-bottom {
-  margin-bottom: 1em;
-}
-.-paddings {
-  padding: 2em;
-}
-.-nopaddings {
-  padding: 0;
-}
-.-nomargins {
-  margin: 0;
-}
-.-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.-overhead {
-  margin-top: -4em;
-}
-.-border-top {
-  border-top: solid 1px #dddddd;
-}
-.-border-bottom {
-  border-bottom: solid 1px #dddddd;
-}
-.-border-dashed {
-  border: dashed 1px #dddddd;
-}
-.-full {
-  width: 100%;
-}
-.flexbox {
-  display: -webkit-flex;
-  display: flex;
-}
-.flexbox > div {
-  flex: 1;
-}
-.-flex-wrap {
-  flex-wrap: wrap;
-}
-/* Z-indexes */
-.z1 {
-  z-index: 1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-.z2 {
-  z-index: 2;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.z3 {
-  z-index: 3;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.shadow {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-.fly {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.paper {
-  background: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 2em;
-}
-.paper.-waste {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  min-width: 400px;
-}
-.paper.-nopaddings {
-  padding: 0;
-}
-.paper.-nopaddings hgroup {
-  padding: 2em;
-}
-.paper.-paddings-small {
-  padding: 1em;
-}
-.paper.z2 {
-  z-index: 2;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.paper.z3 {
-  z-index: 3;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.paper.-selected {
-  margin-bottom: 2px;
-  z-index: 4;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-}
-.paper.-disabled {
-  color: rgba(0, 0, 0, 0.3);
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .hover {
   opacity: 1;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 header {
   padding: 1em;
-  background: #0066cc;
+  background: #2466a9;
   z-index: 2;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -289,27 +276,104 @@ header.-big {
 header.-extra {
   height: 60em;
 }
+main {
+  position: relative;
+}
 footer {
   padding: 6em;
   font-size: 80%;
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
 }
+.paper {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2em;
+}
+.paper.-nopaddings {
+  padding: 0;
+}
+.paper.-nopaddings hgroup {
+  padding: 2em;
+}
+.paper.-paddings-small {
+  padding: 1em;
+}
+.paper.-waste {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  min-width: 400px;
+}
+.paper.-z2 {
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.paper.-z3 {
+  z-index: 3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.paper.-selected {
+  margin-bottom: 2px;
+  z-index: 4;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+.paper.-disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
 button,
 .button,
 input[type=submit] {
   display: inline-block;
-  height: 2em;
+  min-height: 2em;
   padding: 0 1em;
   line-height: 2em;
-  background: #ccc;
-  border: rgba(0, 0, 0, 0.4);
+  background: #eeeeee;
+  border: solid 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   cursor: pointer;
-  box-shadow: inset 0 20px 26px -6px rgba(255, 255, 255, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -moz-user-select: none;
   -webkit-user-select: none;
+}
+button.-small,
+.button.-small,
+input[type=submit].-small {
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 0 0.5em;
+  min-height: 0;
+}
+button.-yellow,
+.button.-yellow,
+input[type=submit].-yellow {
+  background: #ffd700;
+}
+button.-blue,
+.button.-blue,
+input[type=submit].-blue {
+  background: #027ef1;
+  color: #ffffff;
+}
+button.-green,
+.button.-green,
+input[type=submit].-green {
+  background: #0cb707;
+  color: #ffffff;
+}
+button.-rounded,
+.button.-rounded,
+input[type=submit].-rounded {
+  border-radius: 2em;
+}
+button.-round,
+.button.-round,
+input[type=submit].-round {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.7em;
+  padding: 0;
+  border-radius: 2.6em;
 }
 button:focus,
 .button:focus,
@@ -319,7 +383,6 @@ input[type=submit]:focus {
 button:hover,
 .button:hover,
 input[type=submit]:hover {
-  opacity: 1;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 button:active,
@@ -386,7 +449,7 @@ input[type=submit].active:hover {
   table-layout: fixed;
 }
 .table.-hover tbody tr:hover {
-  background: #dddddd;
+  background: #eeeeee;
 }
 .table.-split tr {
   border-bottom: solid 1px #dddddd;

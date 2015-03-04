@@ -1,12 +1,14 @@
 @import "grid.less";
+@import "colors.less";
 
-html {vertical-align:baseline; font-size:1.2em;}
+html {vertical-align:baseline; font-size:1.1em;}
 body {-webkit-font-smoothing: subpixel-antialiased;}
 
 h1, h2 {font-weight:normal}
 h1 {font-size:2.4em; margin:0 0 0.8em 0}
 h2 {font-size:1.7em; margin:1.2em 0 0.8em 0}
 h3 {font-size:1.5em;  margin:1em 0 0.4em 0}
+
 hgroup {padding:@dx}
 hgroup h1 {margin:0}
 
@@ -23,15 +25,9 @@ cite {
 
 code {display: block; margin: 0 0 1em 1em; white-space:pre-line; font-size:1.2em}
 
-th {font-weight: bold}
-
 hr {border: 0; height : 1px; background: rgba(0,0,0,0.2);}
 
 p {margin-bottom:1em; line-height:1.4em}
-
-.muted   {opacity:0.4 !important;}
-.nowrap  {white-space:nowrap;}
-.ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
 a {text-decoration: none; border-bottom:solid 1px; cursor:pointer;
   &.serv, &.pseudo-link { border-bottom-style: dotted; }
@@ -42,15 +38,22 @@ a {text-decoration: none; border-bottom:solid 1px; cursor:pointer;
 
 // Поля ввода
 input[type="text"], input[type="password"], textarea, select {
-    height: 1.8em;
-    padding: .3em .3em 0.1em .3em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-shadow: none;
     border-radius: 2px;
-    font-size: 100%;
+    font-size: 0.9em;
 }
+
+input[type="text"], input[type="password"], textarea {
+    padding: .3em .3em 0.1em .3em;
+}
+
+input[type="text"], input[type="password"], select {
+    height: 1.8em;
+}
+
 
 .disabled, input[type=submit].disabled, input[type=submit][disabled], button.disabled, button[disabled] {
   opacity:0.5; cursor:not-allowed;
@@ -59,20 +62,23 @@ input[type="text"], input[type="password"], textarea, select {
 
 // Списки
 li {padding-top:0.3em; padding-bottom:0.3em}
-form li {list-style-type:none}
 ul.-unstyled {margin:0; padding:0}
 .-unstyled li {list-style-type:none}
+
+
 
 // Базовые модификаторы
 .-open {display: block}
 .-hide {display: none}
 .-collapsed {display: none}
-
 .-misc {font-size:70%}
 
+.-nowrap {white-space:nowrap;}
+.-muted   {opacity:0.4 !important;}
+.-ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
-// Модифитокаторы ширины
-.narrow {width:@dx;}
-.mid {width:3*@dx}
-.wide {width:10 *@dx}
-.full {width:100%;}
+// Alias'ы переходного периода
+.nowrap	{.-nowrap();}
+.muted	{.-muted();}
+.ellipsis {.-ellipsis();}
+
