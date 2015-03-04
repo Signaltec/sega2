@@ -11,13 +11,8 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
     "tests",
-    "sega2",
-    "sanitize.css",
-    "pt-sans",
-    "fontawesome",
     ".bowerrc",
     ".gitignore",
     ".jshintignore",
