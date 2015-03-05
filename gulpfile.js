@@ -1,7 +1,12 @@
 var gulp = require('gulp');
-var webserver = require('gulp-webserver');
 var gutil = require('gulp-util');
+var webserver = require('gulp-webserver');
 var less = require('gulp-less');
+
+var Comb = require('csscomb');
+var combConf = require('./sega2-csscomb.json');
+var comb = new Comb(combConf);
+
 
 var server = {
   host: 'localhost',
@@ -10,8 +15,12 @@ var server = {
 
 var path = { src: "less/", dst: "." };
 
+gulp.task('csscomb', function () {
+  comb.processPath('less');
+});
+
 gulp.task('less', function () {
-  gulp.src([path.src + 'sega2.less'])
+  gulp.src(['sega2.less'])
     .pipe(less())
     .on('error', gutil.log)
     .pipe(gulp.dest(path.dst));
