@@ -18,6 +18,7 @@
     ".jshintignore",
     ".jshintrc",
     "bower.json",
+    "sega2-csscomb.json",
     "gulpfile.js",
     "package.json"
   ],
