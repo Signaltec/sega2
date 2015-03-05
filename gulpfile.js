@@ -1,7 +1,7 @@
-var gulp = require('gulp'),
-    webserver = require('gulp-webserver'),
-    symlink = require('gulp-symlink'),
-    less = require('gulp-less');
+var gulp = require('gulp');
+var webserver = require('gulp-webserver');
+var gutil = require('gulp-util');
+var less = require('gulp-less');
 
 var server = {
   host: 'localhost',
@@ -13,6 +13,7 @@ var path = { src: "less/", dst: "." };
 gulp.task('less', function () {
   gulp.src([path.src + 'sega2.less'])
     .pipe(less())
+    .on('error', gutil.log)
     .pipe(gulp.dest(path.dst));
 });
 

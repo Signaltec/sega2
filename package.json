@@ -1,18 +1,20 @@
 {
   "name": "sega2.css",
   "version": "0.0.1",
-  "description": "SEGA2.css framework",
+  "description": "SEGA2 CSS framework",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
     "gulp": "~3.8.6",
+    "gulp-util": "^3.0.4",
     "gulp-less": "~1.2.3",
     "gulp-webserver": "~0.9.0",
     "gulp-symlink": "*",
     "gulp-watch": "~0.5.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "sudo npm i -g gulp && sudo npm i -g bower && sudo npm link gulp",
+	"test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
