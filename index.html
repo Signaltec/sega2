@@ -350,12 +350,27 @@
     </section>
   
   
-	<section class="paper -waste -nopaddings" style="margin-top: 3em; margin-bottom:3em">
-		<hgroup>
+
+	<section class="paper -waste -nopaddings -indent-big" >
+		<hgroup class="-border-bottom">
 			<h1>Верстка для блока содержащего несколько paper'ов</h1>
 			<p>
 			Используется в правилах pussy_switch
 			</p>
+		</hgroup>
+
+		<hgroup class="-border-bottom">		
+			<h1>Правила</h1>
+
+			<div class="actions" style="left: 14em; min-width:500px">
+				<button class="-round -yellow" ng-click="RULE.add()" title="Новое правило"><i class="fa fa-plus"></i></button>
+
+				<button class="-rounded" ng-class="{ '-green': any_changes }"><i class="fa fa-check"></i> Применить</button>
+
+				<a ng-click="RULE.remove_all()" class="pseudo-link" ng-show="model.rules.length">
+					<i class="fa fa-recycle"></i> Удалить всё
+				</a>
+			</div>
 		</hgroup>
 		
 		

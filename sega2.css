@@ -41,6 +41,16 @@ header {
   margin-top: 1em !important;
   margin-bottom: 1em !important;
 }
+.-indent-top-small {
+  margin-top: 0.5em !important;
+}
+.-indent-bottom-small {
+  margin-bottom: 0.5em !important;
+}
+.-indent-small {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
 .-indent-big {
   margin-top: 2em !important;
   margin-bottom: 2em !important;
@@ -155,12 +165,6 @@ h3 {
   font-size: 1.2em;
   margin: 1em 0 0.4em 0;
 }
-hgroup {
-  padding: 2em;
-}
-hgroup h1 {
-  margin: 0;
-}
 cite {
   display: block;
   margin: 0;
@@ -256,6 +260,9 @@ ul.-unstyled {
 .-misc {
   font-size: 70%;
 }
+.-clickable {
+  cursor: pointer !important;
+}
 .-nowrap {
   white-space: nowrap;
 }
@@ -277,6 +284,9 @@ ul.-unstyled {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.clickable {
+  cursor: pointer !important;
 }
 @-webkit-keyframes fadeOut {
   0% {
@@ -381,6 +391,32 @@ footer {
   font-size: 80%;
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
+}
+hgroup {
+  padding: 2em;
+  position: relative;
+}
+hgroup h1 {
+  margin: 0;
+}
+hgroup .actions {
+  position: absolute;
+  top: 2em;
+  left: 10em;
+  min-width: 20em;
+}
+hgroup .actions button,
+hgroup .actions .button,
+hgroup .actions a {
+  white-space: nowrap;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+hgroup .actions button:last-child,
+hgroup .actions .button:last-child,
+hgroup .actions a:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
 }
 .paper {
   background: white;
@@ -590,6 +626,11 @@ button.disabled:hover,
 button[disabled]:hover {
   opacity: 0.5;
 }
+.input-replace {
+  display: inline-block;
+  padding: .3em .3em 0.1em .3em;
+  font-size: 0.9em;
+}
 .table {
   width: 100%;
   margin: 0;
@@ -621,6 +662,9 @@ button[disabled]:hover {
 .table th {
   padding: 0.4em 0.5em;
   vertical-align: top;
+}
+.taps {
+  margin-left: -0.5em;
 }
 .tap {
   padding: 7px 10px 5px 10px;

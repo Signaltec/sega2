@@ -52,6 +52,15 @@ footer {
   color: rgba(0,0,0,0.5); 
 }
 
+// Hgroup
+hgroup {padding:@dx; position:relative;
+	h1 {margin:0}
+	.actions {position: absolute; top:@dx; left:10em; min-width:20em;
+		button, .button, a {white-space: nowrap; margin-right: @dx; margin-bottom: @dx/2;}
+		button:last-child, .button:last-child, a:last-child {margin-right: 0; margin-bottom: 0;}
+	}
+}
+
 // Paper
 .paper {
   background:white; .shadow(); padding:@dx;
@@ -149,6 +158,8 @@ input[type="text"], input[type="password"], select {
   &:hover {opacity:0.5;}
 }
 
+.input-replace {display:inline-block; padding:.3em .3em 0.1em .3em; font-size:0.9em}
+
 
 // Table
 .table {
@@ -171,7 +182,8 @@ input[type="text"], input[type="password"], select {
     td, th {padding:0.4em 0.5em; vertical-align:top; }
 }
 
-// Tap
+// Tap's
+.taps {margin-left:-0.5em}
 .tap {padding:7px 10px 5px 10px;
   a {border-bottom: dotted 1px black}
   &.-active {background:@tap-bg; color:rbga(0,0,0,0.7); border-radius: 1.2em; box-shadow:inset 0 1px 7px -1px rgba(0, 0, 0, 0.2)}
