@@ -475,6 +475,54 @@
 	
 	</section>  
 
+  
+  
+  <section class="paper -waste -indent-big" >
+    <h1>Анимация кнопки</h1>
+    
+    <button class="-round -yellow -animated addButton" onClick="toggle('.addButton','moveDown')"><i class="fa fa-plus"></i></button>
+
+    
+    <div style="height:100px">
+    </div>
+    
+    <style>
+  
+.-animated { 
+    -webkit-animation-duration: 0.5s; 
+    animation-duration: 0.5s; 
+    -webkit-animation-timing-function: ease-in-out; 
+    animation-timing-function: ease-in-out; 
+} 
+
+@-webkit-keyframes moveDown { 
+    0% { -webkit-transform: translateY(0); } 
+    100% { -webkit-transform: translateY(80px); } 
+} 
+
+@keyframes moveDown { 
+    0% { transform: translateY(0); } 
+    100% { transform: translateY(80px); } 
+} 
+
+.moveDown { 
+    -webkit-animation-name: moveDown; 
+    animation-name: moveDown; 
+}
+    
+    </style>
+    
+    <script>
+      function animateButton(el) {
+        //el = document.querySelector(el);
+        toggle(el,'moveDown');
+      }
+    </script>
+    
+  </section>
+  
+  
+  
 	
     
   </div>
@@ -506,12 +554,13 @@
     function toggle(el, className) {
       if(el) {
         el = document.querySelector(el);
-        if(el.className.indexOf(className)) {
+        if(el.className.indexOf(className)!= -1) {
           el.className = el.className.replace(className, '');
         } else {
           el.className += ' ' + className;
         }
         //el.className = className;
+        console.log('toggle:', el.className);
       }
     }
 

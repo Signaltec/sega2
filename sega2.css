@@ -2,120 +2,6 @@
 @import "lib/pt-sans/styles/pt_sans.css";
 @import "lib/fontawesome/css/font-awesome.min.css";
 @import "lib/ios7switch.css";
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before {
-  display: block;
-  content: "";
-}
-.clearfix:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-html {
-  vertical-align: baseline;
-  font-size: 1.1em;
-}
-body {
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-h1,
-h2 {
-  font-weight: normal;
-}
-h1 {
-  margin: 0 0 0.8em 0;
-  font-size: 2.4em;
-}
-h2 {
-  margin: 1.2em 0 0.8em 0;
-  font-size: 1.7em;
-}
-h3 {
-  margin: 1em 0 0.4em 0;
-  font-size: 1.2em;
-}
-cite {
-  display: block;
-  margin: 0;
-  padding: 1em 1em 1em 4em;
-  max-width: 72em;
-  color: rgba(0, 0, 0, 0.5);
-  font-style: normal;
-}
-cite author {
-  display: block;
-  margin-top: 1em;
-  font-style: italic;
-}
-code {
-  display: block;
-  margin: 0 0 1em 1em;
-  white-space: pre-line;
-  font-size: 1.2em;
-}
-hr {
-  height: 1px;
-  border: 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-p {
-  margin-bottom: 1em;
-  line-height: 1.4em;
-}
-a {
-  border-bottom: solid 1px;
-  text-decoration: none;
-  cursor: pointer;
-}
-a:link {
-  color: #0086e4;
-}
-a:hover {
-  opacity: 1;
-}
-li {
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-}
-ul.-unstyled {
-  margin: 0;
-  padding: 0;
-}
-.-unstyled li {
-  list-style-type: none;
-}
-dl {
-  padding: 5px 0 5px 0;
-  zoom: 1;
-}
-dl:before {
-  display: block;
-  content: "";
-}
-dl:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-dl dt {
-  float: left;
-  margin-right: 1em;
-  min-height: 1em;
-}
-dl dd {
-  min-height: 1.4em;
-}
-body {
-  background: #eeeeee;
-  color: #000000;
-}
-header {
-  background: #2466a9;
-  color: #ffffff;
-}
 .c1 {
   width: 2em;
 }
@@ -282,6 +168,120 @@ header {
 }
 [ng-click] {
   cursor: pointer;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before {
+  display: block;
+  content: "";
+}
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+html {
+  vertical-align: baseline;
+  font-size: 1.1em;
+}
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+h1 {
+  margin: 0 0 0.8em 0;
+  font-size: 2.4em;
+}
+h2 {
+  margin: 1.2em 0 0.8em 0;
+  font-size: 1.7em;
+}
+h3 {
+  margin: 1em 0 0.4em 0;
+  font-size: 1.2em;
+}
+cite {
+  display: block;
+  margin: 0;
+  padding: 1em 1em 1em 4em;
+  max-width: 72em;
+  color: rgba(0, 0, 0, 0.5);
+  font-style: normal;
+}
+cite author {
+  display: block;
+  margin-top: 1em;
+  font-style: italic;
+}
+code {
+  display: block;
+  margin: 0 0 1em 1em;
+  white-space: pre-line;
+  font-size: 1.2em;
+}
+hr {
+  height: 1px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+p {
+  margin-bottom: 1em;
+  line-height: 1.4em;
+}
+a {
+  border-bottom: solid 1px;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:link {
+  color: #0086e4;
+}
+a:hover {
+  opacity: 1;
+}
+li {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+ul.-unstyled {
+  margin: 0;
+  padding: 0;
+}
+.-unstyled li {
+  list-style-type: none;
+}
+dl {
+  padding: 5px 0 5px 0;
+  zoom: 1;
+}
+dl:before {
+  display: block;
+  content: "";
+}
+dl:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+dl dt {
+  float: left;
+  margin-right: 1em;
+  min-height: 1em;
+}
+dl dd {
+  min-height: 1.4em;
+}
+body {
+  background: #eeeeee;
+  color: #000000;
+}
+header {
+  background: #2466a9;
+  color: #ffffff;
 }
 .hover {
   opacity: 1;
