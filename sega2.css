@@ -532,6 +532,7 @@ select {
 }
 .taps {
   margin-left: -0.5em;
+  display: inline-block;
 }
 .tap {
   padding: 7px 10px 5px 10px;
@@ -544,4 +545,7 @@ select {
 }
 .tap a {
   border-bottom: dotted 1px black;
+}
+.tap.-active a {
+  border-bottom: none;
 }
