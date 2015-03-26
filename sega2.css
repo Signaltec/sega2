@@ -2,6 +2,14 @@
 @import "lib/pt-sans/styles/pt_sans.css";
 @import "lib/fontawesome/css/font-awesome.min.css";
 @import "lib/ios7switch.css";
+body {
+  background: #eeeeee;
+  color: #000000;
+}
+header {
+  background: #2466a9;
+  color: #ffffff;
+}
 .c1 {
   width: 2em;
 }
@@ -274,14 +282,6 @@ dl dt {
 }
 dl dd {
   min-height: 1.4em;
-}
-body {
-  background: #eeeeee;
-  color: #000000;
-}
-header {
-  background: #2466a9;
-  color: #ffffff;
 }
 .hover {
   opacity: 1;
@@ -560,6 +560,15 @@ select {
   /* This bridges the gap so you can mouse into the tooltip without it disappearing */
   /* CSS Triangles - see Trevor's post */
 }
+.tooltip.-withlink {
+  cursor: default;
+}
+.tooltip.-withlink a {
+  cursor: help;
+}
+.tooltip.-withlink a:hover ~ .tooltip-text {
+  opacity: 1;
+}
 .tooltip .tooltip-text {
   background: #555;
   bottom: 100%;
@@ -616,12 +625,6 @@ select {
   -o-transform: translateY(0px);
   transform: translateY(0px);
 }
-cursor:default .tooltip.-withlink:hover .tooltip-text {
+.tooltip.-withlink:hover .tooltip-text {
   opacity: 0;
-}
-.tooltip.-withlink a {
-  cursor: help;
-}
-.tooltip.-withlink a:hover ~ .tooltip-text {
-  opacity: 1;
 }

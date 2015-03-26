@@ -197,6 +197,11 @@ input[type="text"], input[type="password"], select {
   -webkit-transform: translateZ(0); /* webkit flicker fix */
   -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
 
+  &.-withlink {cursor:default;
+    a {cursor: help;}
+    a:hover ~ .tooltip-text {opacity: 1}
+  }
+  
   .tooltip-text {
     background: #555;
     bottom: 100%;
@@ -259,11 +264,7 @@ input[type="text"], input[type="password"], select {
             transform: translateY(0px);
   }
   
-  &.-withlink {cursor:default
-    &:hover .tooltip-text {opacity: 0}
-    a {cursor: help;}
-    a:hover ~ .tooltip-text {opacity: 1}
-  }
+  &.-withlink:hover .tooltip-text {opacity: 0}
 }
 
 
