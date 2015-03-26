@@ -258,6 +258,12 @@ input[type="text"], input[type="password"], select {
          -o-transform: translateY(0px);
             transform: translateY(0px);
   }
+  
+  &.-withlink {cursor:default
+    &:hover .tooltip-text {opacity: 0}
+    a {cursor: help;}
+    a:hover ~ .tooltip-text {opacity: 1}
+  }
 }
 
 
