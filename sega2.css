@@ -529,6 +529,7 @@ select {
 .table th {
   padding: 0.4em 0.5em;
   vertical-align: top;
+  line-height: 1.2em;
 }
 .taps {
   margin-left: -0.5em;
