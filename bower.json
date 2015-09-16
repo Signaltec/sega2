@@ -1,7 +1,7 @@
 {
   "name": "sega2",
   "version": "0.0.2",
-  "description": "sega2 css framework",
+  "description": "SEGA2 css framework",
   "main": "dist/sega2.css",
   "authors": [
     "ildarka"
@@ -22,10 +22,9 @@
     "gulpfile.js",
     "package.json"
   ],
-  "devDependencies": {
+  "dependencies": {
     "sanitize.css": "~2.0.0",
     "pt-sans": "*",
-    "Stickyfill": "*",
-    "fontawesome": "~4.3.0"
+    "mdi": "*"
   }
 }
