@@ -21,12 +21,11 @@
            <li><input type="radio" name="h_size" value="-mid" onclick="setMod('header',this.value)"/> Средний размер -mid</li>
            <li><input type="radio" name="h_size" value="-big" onclick="setMod('header',this.value)" /> Большой размер -big</li>
            <li><input type="radio" name="h_size" value="-extra" onclick="setMod('header',this.value)" /> Супер-большой размер -extra</li>
-           <li class="-indent-top"><input type="checkbox" onclick="setMod('header', '-sticky', this.checked)" /> Прилепленный -sticky</li>
          </ul>
          </form>   
     </section>  
     
-    <hgroup class="-sticky" style="background: #eee; padding:10px">
+    <hgroup style="background: #eee; padding:10px">
       <h1 style="text-align:center">sega2 css framework</h1>
     </hgroup>
     
@@ -47,14 +46,14 @@
 	<ul>
        <li>Размера: -small, -mid, -big, -extra</li>
        <li>Состояния: -disabled, -active, -selected, -open, -collapsed, -hide, -visible</li>
-       <li>Положения: -sticky, -fixed</li>
+       <li>Положения: -fixed</li>
        <li>Перекрытия: -ellipsis, -overflow-hidden</li>
        <li>Приоритета: -misc</li>
        <li class="-indent-top">Колонки: c1, c2, c3,…, -full</li>
       </ul>
 
       <cite>
-        При создании кастомного модификатора, например, для -sticky используется след. порядок: -sticky-header.
+        При создании кастомного модификатора, например, для -fixed используется след. порядок: -fixed-header.
       </cite>  
 	<p>	
       Зависимости:
@@ -62,8 +61,7 @@
 	<ul>
 		<li><a href="https://github.com/ZDroid/sanitize.css">Sanitize.css</a></li>
 		<li><a href="https://github.com/stones/bower-pt-sans">PT-Sans</a></li>
-		<li><a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome</a></li>
-		<li><a href="https://github.com/wilddeer/stickyfill">Stickyfill</a></li>
+		<li><a href="https://materialdesignicons.com/">Material design icons</a></li>
 		<li>ios7switch</li>
 
       </ul>
@@ -254,8 +252,8 @@
 
 		<button class="-yellow">-yellow</button>
 		<button class="-blue">-blue</button>
-		<button class="-green -rounded"><i class="fa fa-check"></i> -green -rounded</button>
-		<button class="-yellow -round"><i class="fa fa-plus"></i></button>
+		<button class="-green -rounded"><i class="mdi mdi-check"></i> -green -rounded</button>
+		<button class="-yellow -round"><i class="mdi mdi-plus"></i></button>
 		
 		<a class="button">.button</a>
 
@@ -377,12 +375,12 @@
 			<h1>Правила</h1>
 
 			<div class="actions" style="left: 14em; min-width:500px">
-				<button class="-round -yellow" ng-click="RULE.add()" title="Новое правило"><i class="fa fa-plus"></i></button>
+				<button class="-round -yellow" ng-click="RULE.add()" title="Новое правило"><i class="mdi mdi-plus"></i></button>
 
-				<button class="-rounded" ng-class="{ '-green': any_changes }"><i class="fa fa-check"></i> Применить</button>
+				<button class="-rounded" ng-class="{ '-green': any_changes }"><i class="mdi mdi-check"></i> Применить</button>
 
 				<a ng-click="RULE.remove_all()" class="pseudo-link" ng-show="model.rules.length">
-					<i class="fa fa-recycle"></i> Удалить всё
+					<i class="mdi mdi-recycle"></i> Удалить всё
 				</a>
 			</div>
 		</hgroup>
@@ -426,10 +424,10 @@
 					  <span></span>
 						</label> 
 						</li>
-						<li><a class="pseudo-link"><i class="fa fa-arrow-up"></i> Больше приоритет</a><li>
-						<li><a class="pseudo-link"><i class="fa fa-arrow-down"></i> Меньше приоритет</a><li>
-						<li><a class="pseudo-link"><i class="fa fa-copy"></i> Дублировать</a><li>
-						<li class="-indent-top"><a class="pseudo-link"><i class="fa fa-trash"></i> Удалить</a><li>
+						<li><a class="pseudo-link"><i class="mdi mdi-arrow-up"></i> Больше приоритет</a><li>
+						<li><a class="pseudo-link"><i class="mdi mdi-arrow-down"></i> Меньше приоритет</a><li>
+						<li><a class="pseudo-link"><i class="mdi mdi-content-copy"></i> Дублировать</a><li>
+						<li class="-indent-top"><a class="pseudo-link"><i class="mdi mdi-delete"></i> Удалить</a><li>
 						
 					</ul>	
 			</div>
@@ -494,7 +492,7 @@
   <section class="paper -waste -indent-big" >
     <h1>Анимация кнопки</h1>
     
-    <button class="-round -yellow -animated addButton" onClick="toggle('.addButton','moveDown')"><i class="fa fa-plus"></i></button>
+    <button class="-round -yellow -animated addButton" onClick="toggle('.addButton','moveDown')"><i class="mdi mdi-plus"></i></button>
 
     
     <div style="height:100px">
@@ -548,22 +546,7 @@
   </footer>
 
   
-  <script src="lib/Stickyfill/dist/stickyfill.min.js"></script>  
-
   <script>
-
-  </script>
-  
-  <script>
-    header.h_size.value = '-mid';
-    refresh_sticky();
-    
-    function refresh_sticky() {
-      var e = document.querySelectorAll('.-sticky');
-      for (var i = e.length - 1; i >= 0; i--) {
-          Stickyfill.add(e[i]);
-      }
-    }
     
     function toggle(el, className) {
       if(el) {
@@ -587,7 +570,6 @@
         if (flag)  el.className += ' ' + className; else el.className = el.className.replace(className, '');
       }
       
-      refresh_sticky();
     }
 
     
