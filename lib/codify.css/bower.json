@@ -1,0 +1,22 @@
+{
+  "name": "codify.css",
+  "author": "Zlatan Vasović",
+  "description": "A minimal and customizable CSS normalization library",
+  "keywords": [
+    "sanitize",
+    "normalize",
+    "front-end",
+    "css",
+    "less"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/zdroid/codify.css",
+  "main": "dist/codify.css",
+  "ignore": [
+    "**/.*",
+    "Gruntfile.js",
+    "package.json",
+    "src"
+  ]
+}

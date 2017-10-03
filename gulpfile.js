@@ -11,7 +11,7 @@ var comb = new Comb(combConf);
 var server = {
   host: 'localhost',
   port: '3001'
-}
+};
 
 var path = { src: "less/", dst: "." };
 

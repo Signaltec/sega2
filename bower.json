@@ -23,8 +23,8 @@
     "package.json"
   ],
   "dependencies": {
-    "sanitize.css": "~2.0.0",
     "pt-sans": "*",
-    "mdi": "*"
+    "mdi": "*",
+    "codify.css": "sanitize.css#^1.0.0"
   }
 }
