@@ -1,6 +1,6 @@
 {
   "name": "sega2.css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SEGA2 CSS framework",
   "main": "gulpfile.js",
   "devDependencies": {
