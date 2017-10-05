@@ -25,8 +25,7 @@
     "tag": "v1.0.0",
     "commit": "b9180f7e2f3b0000c07b616610c7f8258c310e99"
   },
-  "_source": "https://github.com/ZDroid/sanitize.css.git",
-  "_target": "^1.0.0",
-  "_originalSource": "sanitize.css",
-  "_direct": true
+  "_source": "https://github.com/zdroid/codify.css.git",
+  "_target": "*",
+  "_originalSource": "codify.css"
 }

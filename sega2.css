@@ -2,6 +2,14 @@
 @import "lib/pt-sans/styles/pt_sans.css";
 @import "lib/mdi/css/materialdesignicons.min.css";
 @import "lib/ios7switch.css";
+body {
+  background: #eeeeee;
+  color: #000000;
+}
+header {
+  background: #2466a9;
+  color: #ffffff;
+}
 .c1 {
   width: 2em;
 }
@@ -271,14 +279,6 @@ dl dt {
 }
 dl dd {
   min-height: 1.4em;
-}
-body {
-  background: #eeeeee;
-  color: #000000;
-}
-header {
-  background: #2466a9;
-  color: #ffffff;
 }
 .hover {
   opacity: 1;
