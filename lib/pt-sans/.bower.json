@@ -27,7 +27,7 @@
     "branch": "master",
     "commit": "f9c3d3d13b47dd785e545db0da53dba1dfdc8adc"
   },
-  "_source": "git://github.com/stones/bower-pt-sans.git",
+  "_source": "https://github.com/stones/bower-pt-sans.git",
   "_target": "*",
   "_originalSource": "pt-sans"
 }
