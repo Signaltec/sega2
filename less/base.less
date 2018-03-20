@@ -94,12 +94,6 @@
 
 .-fly { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
 
-// Модификаторы состояния
-.-disabled {
-    opacity: 0.5 !important;
-    cursor: not-allowed;
-    &:hover { opacity: 0.5; } }
-
 .-muted { opacity: 0.4 !important; }
 
 .-misc { font-size: 70%; }
@@ -107,3 +101,9 @@
 // AngularJS
 [ng-cloak], .ng-cloak { display: none; }
 [ng-click] { cursor: pointer; }
+
+    // Модификаторы состояния
+.-disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed;
+    &:hover { opacity: 0.5; } }
