@@ -4,12 +4,12 @@
   "description": "SEGA2 CSS framework",
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "~3.8.6",
+    "csscomb": "latest",
+    "gulp": "^3.8.11",
     "gulp-less": "~1.2.3",
     "gulp-util": "^3.0.4",
     "gulp-watch": "~0.5.2",
-    "gulp-webserver": "~0.9.0",
-    "csscomb": "latest"
+    "gulp-webserver": "~0.9.0"
   },
   "scripts": {
     "preinstall": "sudo npm i -g gulp && sudo npm i -g bower && sudo npm link gulp && sudo npm i -g csscomb",

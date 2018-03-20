@@ -1,13 +1,13 @@
 {
   "name": "sega2",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "SEGA2 css framework",
   "main": "dist/sega2.css",
   "authors": [
     "ildarka"
   ],
   "license": "FREE",
-  "homepage": "signaltech.ru",
+  "homepage": "signaltec.ru",
   "ignore": [
     "**/.*",
     "node_modules",

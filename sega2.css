@@ -154,13 +154,6 @@ a.pseudo-link {
 .-fly {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.-disabled {
-  opacity: 0.5 !important;
-  cursor: not-allowed;
-}
-.-disabled:hover {
-  opacity: 0.5;
-}
 .-muted {
   opacity: 0.4 !important;
 }
@@ -173,6 +166,13 @@ a.pseudo-link {
 }
 [ng-click] {
   cursor: pointer;
+}
+.-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+.-disabled:hover {
+  opacity: 0.5;
 }
 .clearfix {
   zoom: 1;
